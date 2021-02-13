@@ -14,7 +14,7 @@ repository?
 
 This plugin is for ***you***!
 
-## Development status
+## Development status [![Build status](https://badge.buildkite.com/f753f41acf220d442a86441a125f80fe10902f402ddea890fc.svg)](https://buildkite.com/johnsyweb/json-lint-buildkite-plugin)
 
 This plugin is based on [Markdown Lint Buildkite
 Plugin](https://github.com/johnsyweb/markkdownlint-buildkite-plugin). It will be
