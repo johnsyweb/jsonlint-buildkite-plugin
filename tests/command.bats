@@ -19,8 +19,8 @@ fi
   assert_output --partial "checking JSON files (*.*json)"
 }
 
-@test "Checks the pattern in BUILDKITE_PLUGIN_JSON_LINT_PATTERN" {
-  export BUILDKITE_PLUGIN_JSON_LINT_PATTERN="valid.json"
+@test "Checks the pattern in BUILDKITE_PLUGIN_JSONLINT_PATTERN" {
+  export BUILDKITE_PLUGIN_JSONLINT_PATTERN="valid.json"
 
   run "$PWD/hooks/command"
 
@@ -28,7 +28,7 @@ fi
 }
 
 @test "Uses the latest Docker image by default" {
-  export BUILDKITE_PLUGIN_JSON_LINT_PATTERN="valid.json"
+  export BUILDKITE_PLUGIN_JSONLINT_PATTERN="valid.json"
 
   _DOCKER_ARGS='run --rm -v /plugin:/mnt --workdir /mnt cytopia/jsonlint:latest ./tests/data/valid.json'
 
@@ -40,9 +40,9 @@ fi
   assert_output --partial "Success"
 }
 
-@test "Uses the BUILDKITE_PLUGIN_JSON_LINT_VERSION of Docker image if supplied" {
-  export BUILDKITE_PLUGIN_JSON_LINT_PATTERN="valid.json"
-  export BUILDKITE_PLUGIN_JSON_LINT_VERSION="3.14"
+@test "Uses the BUILDKITE_PLUGIN_JSONLINT_VERSION of Docker image if supplied" {
+  export BUILDKITE_PLUGIN_JSONLINT_PATTERN="valid.json"
+  export BUILDKITE_PLUGIN_JSONLINT_VERSION="3.14"
 
   _DOCKER_ARGS='run --rm -v /plugin:/mnt --workdir /mnt cytopia/jsonlint:3.14 ./tests/data/valid.json'
 
