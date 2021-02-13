@@ -1,0 +1,23 @@
+---
+steps:
+  - label: ":markdown: Markdown Lint"
+    plugins:
+      - johnsyweb/markdownlint#v1.0.0:
+          pattern: '*.md'
+
+  - label: ":hammer: Test"
+    plugins:
+      docker-compose#v3.7.0:
+        run: tests
+
+  - label: ":sparkles: Lint"
+    plugins:
+      plugin-linter#v2.0.0:
+        id: johnsyweb/markdownlint
+
+  - label: ":shell: Shellcheck"
+    plugins:
+      shellcheck#v1.0.1:
+        files:
+          - hooks/**
+          - scripts/**

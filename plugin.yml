@@ -1,0 +1,12 @@
+---
+name: JSON Lint
+description: A Buildkite plugin to check JSON files and flag style issues.
+author: https://msha.ke/johnsyweb/
+requirements:
+  - docker
+configuration:
+  properties:
+    pattern:
+      type: string
+    version:
+      type: string

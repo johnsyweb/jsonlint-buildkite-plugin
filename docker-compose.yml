@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  tests:
+    image: buildkite/plugin-tester
+    volumes:
+      - ".:/plugin"
+  lint:
+    image: buildkite/plugin-linter
+    command: ['--id', 'johnsyweb/jsonlint']
+    volumes:
+      - ".:/plugin"
