@@ -1,6 +1,6 @@
 ---
 name: JSON Lint
-description: A Buildkite plugin to check JSON files and flag style issues.
+description: A Buildkite plugin to check JSON files and syntax errors
 author: https://msha.ke/johnsyweb/
 requirements:
   - docker
