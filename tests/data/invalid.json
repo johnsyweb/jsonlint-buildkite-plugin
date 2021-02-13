@@ -1,1 +1,8 @@
-{"aoife":{"age":21},"bronagh":{"age":22},}
+{
+    "aoife": {
+        "age": 21
+    },
+    "bronagh": {
+        "age": 22
+    },
+}
