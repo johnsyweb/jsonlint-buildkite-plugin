@@ -1,5 +1,10 @@
 ---
 steps:
+  - label: ":json: Meta"
+    plugins:
+      - johnsyweb/jsonlint#v1.0.0:
+          pattern: 'valid.json'
+
   - label: ":markdown: Markdown Lint"
     plugins:
       - johnsyweb/markdownlint#v1.0.0:
